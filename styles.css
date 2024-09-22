@@ -1,0 +1,167 @@
+/* Reset chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Thân trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Brush section */
+.brush {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.brush img {
+    width: 176px;
+    height: 57px;
+    display: block;
+    margin: 0 auto; /* Để hình brush nằm giữa */
+    z-index: 1;
+}
+
+.news-title {
+    position: absolute; /* Sử dụng position absolute để đè lên brush */
+    top: 0px; /* Điều chỉnh vị trí trên */
+    left: 50%; /* Đặt giữa theo chiều ngang */
+    transform: translateX(-50%); 
+    font-size: 36px; 
+    font-weight: bold;
+    color: black;
+    z-index: 2; /* Đảm bảo chữ nằm trên brush */
+}
+
+/* Phần hiển thị tin tức */
+
+.news-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+/* hinh anh */
+.main-image {
+    flex-grow: 3;
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+}
+
+.large-card {
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* noi dung */
+.news-content {
+    flex-grow: 1;
+    padding: 10px;
+    text-align: left;
+    font-size: 1.5rem;
+    margin: 10px 20px 20px 20px;
+    
+}
+
+.news-content h2 {
+    font-size: 1.5rem;
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+.news-content p {
+    color: gray;
+    font-size: 0.9rem;
+    margin: 10px;
+}
+
+/*  sidebar*/
+.news-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.news-card img {
+    width: 100%;
+    height: auto;
+}
+
+.news-card.large-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0px 0px;
+    position: relative;
+}
+
+.news-sidebar {
+    /* flex-basis: 40%; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar-image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+}
+
+
+/* Nút More */
+.more-btn {
+    margin: 60px ;
+}
+
+.more-btn button {
+    width: 144px;
+    height: 42px;
+    background-color: #fff;
+    color: #129D49;
+    border: 1px solid;
+    padding: 5px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+/* Carousel logo ở footer */
+.footer-logos-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 10px;
+    animation: scroll 20s linear infinite;
+}
+
+.footer-logos-carousel img {
+    width: 292px;
+    height: 199px;
+    object-fit: contain;
+}
+
+@keyframes scroll {
+    0% {
+    transform: translateX(0);
+    }
+    100% {
+    transform: translateX(-100%);
+    }
+}
